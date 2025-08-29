@@ -54,4 +54,7 @@ app.post("/bfhl", (req, res) => {
   }
 });
 
-module.exports = app;
+// ✅ Export handler instead of app
+module.exports = (req, res) => {
+  app(req, res);
+};
